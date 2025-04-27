@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập JS Buổi 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        .BT {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px; 
+        }
+
+        .container {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 30px;
+            flex: 1;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 48%; 
+            min-width: 320px; 
+        }
+
+        #result, #total, #result_DTB, #tongTien, #tongTienDoi {
+            border: 1px solid #4CAF50;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="BT">
+        <div class="container">
+            <h1>Tính chu vi và diện tích hình chữ nhật</h1>
+    
+            <label for="length">Chiều dài:</label>
+            <input type="number" id="length" placeholder="Nhập chiều dài"><br><br>
+    
+            <label for="width">Chiều rộng:</label>
+            <input type="number" id="width" placeholder="Nhập chiều rộng"> <br><br>
+    
+            <button onclick="calculate()">Tính toán</button>
+    
+            <div id="result"></div>
+        </div>
+
+        <div class="container">
+            <h1>Tính tổng 2 ký số</h1>
+    
+            <label for="number">Nhập vào số có 2 chữ số</label>
+            <input type="number" id="number" placeholder="Nhập số có 2 chữ số"><br><br>
+    
+            <button onclick="devideNumber()">Tính tổng</button>
+    
+            <div id="total"></div>
+        </div>
+    </div>
+    <div class="BT">
+         <div class="container">
+            <h1>Tính trung bình 5 số</h1>
+
+            <label for="number_x1">Nhập vào số thứ 1</label>
+            <input type="number" id="number_x1" placeholder="Nhập vào số thứ 1"><br><br>
+            <label for="number_x2">Nhập vào số thứ 2</label>
+            <input type="number" id="number_x2" placeholder="Nhập vào số thứ 2"><br><br>
+            <label for="number_x3">Nhập vào số thứ 3</label>
+            <input type="number" id="number_x3" placeholder="Nhập vào số thứ 3"><br><br>
+            <label for="number_x4">Nhập vào số thứ 4</label>
+            <input type="number" id="number_x4" placeholder="Nhập vào số thứ 4"><br><br>
+            <label for="number_x5">Nhập vào số thứ 5</label>
+            <input type="number" id="number_x5" placeholder="Nhập vào số thứ 5"><br><br>
+
+            <button onclick="TinhDTB()">Tính TB</button>
+
+            <div id="result_DTB"></div>
+        </div>
+        <div class="container">
+            <h1>Tính lương nhân viên</h1>
+
+            <label for="luongNgay">Nhập vào lương ngày</label>
+            <input type="number" id="luongNgay" placeholder="Nhập vào lương ngày"><br><br>
+            <label for="soNgayLam">Nhập vào số ngày làm</label>
+            <input type="number" id="soNgayLam" placeholder="Nhập vào số ngày làm"><br><br>
+
+            <button onclick="tinhLuong()">Tính lương</button>
+
+            <div id="tongTien"></div>
+        </div>
+
+    </div>
+    <div class="BT">
+        <div class="container" style="width: 100%; max-width: none;">
+            <h1>Tính tiền sau khi đổi</h1>
+
+            <label for="soLuong">Nhập vào số tiền USD</label>
+            <input type="number" id="soLuong" placeholder="Nhập vào số tiền USD"><br><br>
+
+            <button onclick="doiTien()">Đổi tiền</button>
+
+            <div id="tongTienDoi"></div>
+        </div>
+    </div>
+    <script src="./calculateAverage.js"></script>
+    <script src="./calculateDigitSum.js"></script>
+    <script src="./calculateRectangle.js"></script>
+    <script src="./calculateSalary.js"></script>
+    <script src="./convertCurrency.js"></script>
+</body>
+</html>
